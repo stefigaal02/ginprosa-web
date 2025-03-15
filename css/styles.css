@@ -1,0 +1,195 @@
+:root{
+    --color-primario: #E78C22; /* NARANJA PRINCIPAL */
+    --color-secundario: #F4A442; /* AMARILLO OSCURO */
+    --color-terciario: #C46A2B; /* NARANJA PRINCIPAL */
+    --color-fondo: #F8E2C2; /* NARANJA PRINCIPAL */
+    --color-texto: #4A3223; /* NARANJA PRINCIPAL */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/*Encabezad*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el logo a la izquierda y el menú a la derecha */
+    padding: 10px 50px;
+    background-color: var(--color-primario);
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 20px; /* Da un poco de espacio entre el logo y el menú */
+}
+nav {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+    display: flex;
+    justify-content: center; /* Centra el menú */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Separa los elementos del menú */
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: var(--color-secundario);
+}
+/*seccion principal*/
+section{
+    text-align: center;
+    padding: 50px 20px;
+}
+/*botones*/
+.btn{
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: var(--color-secundario);
+}
+/*trayectoria*/
+.trayectoria{
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+    border-left: 5px solid var(--color-terciario);
+}
+/*carrusel de valores*/
+.carousel-inner img{
+    height: 400px;
+    object-fit: cover;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+/*seccion *somos grinprosa**/
+.somos-ginprosa{
+    background-color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+.somos-ginprosa .descripcion {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.perfil {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* ----footer ---- */
+.footer {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 40px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.logo-footer {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* rees sociales */
+.redes-sociales a {
+    font-size: 20px;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #d1d1d1;
+}
+
+/* info contacto */
+.contacto li {
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.contacto i {
+    margin-right: 8px;
+    color: white;
+}
+
+/* btn del footer */
+.btn-footer {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid white;
+    color: var(--color-primario);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-footer:hover {
+    background-color: white;
+    color: var(--color-terciario);
+}
+
+header{
+    background-color: var(--color-primario) !important;
+}
