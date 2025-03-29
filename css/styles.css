@@ -1,195 +1,299 @@
-:root{
-    --color-primario: #E78C22; /* NARANJA PRINCIPAL */
-    --color-secundario: #F4A442; /* AMARILLO OSCURO */
-    --color-terciario: #C46A2B; /* NARANJA PRINCIPAL */
-    --color-fondo: #F8E2C2; /* NARANJA PRINCIPAL */
-    --color-texto: #4A3223; /* NARANJA PRINCIPAL */
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+/*  colores */
+:root {
+    --color-primario: #E78C22;
+    --color-secundario: #F4A442;
+    --color-texto: #fff;
 }
 
-*{
+/* reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
-
-body{
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-}
-
-/*Encabezad*/
-header {
+/* heaer */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 50px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye el logo a la izquierda y el menú a la derecha */
-    padding: 10px 50px;
-    background-color: var(--color-primario);
+    justify-content: space-between;
+    background: #f6a55c; 
 }
+
+/* Ajuste del logo */
 .logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+    width: 50px;
+	margin-right: 10px;
+}
+
+.logo h1 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	margin: 0;
+}
+
+.logo-container {
     display: flex;
     align-items: center;
 }
-.logo img {
-    width: 100px; /* Ajusta el tamaño del logo */
+
+.logo-container img {
+    width: 50px; 
     height: auto;
-    margin-right: 20px; /* Da un poco de espacio entre el logo y el menú */
-}
-nav {
-    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
-    display: flex;
-    justify-content: center; /* Centra el menú */
+    margin-right: 10px;
 }
 
-nav ul {
-    list-style: none;
+.logo-container h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+/* menu de navegacion */
+.navbar {
     display: flex;
-    gap: 30px; /* Separa los elementos del menú */
+    justify-content: space-between;
+    align-items: center;
 }
-nav ul li {
-    display: inline;
+
+.navbar ul {
+	list-style: none;
+    margin-left: auto; 
+    display: flex; 
+    gap: 20px;
 }
-nav ul li a {
-    color: white;
+
+
+.navbar ul li {
+	position: relative;
+}
+
+.navbar ul li a {
+    color: black;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+    position: relative;
 }
-nav ul li a:hover {
-    color: var(--color-secundario);
+
+.navbar ul li a:hover {
+    color: black;
 }
-/*seccion principal*/
-section{
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after,
+.navbar ul li.active a::after {
+    width: 100%;
+}
+
+.btn-contactanos {
+    background-color: #d46a1b; 
+    color: white; 
+    padding: 12px 19px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-contactanos:hover {
+    background-color: #b85817; 
+}
+
+/* CARRUSEL */
+#hero-carousel {
+    
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fondo compartido entre el header y el carousel */
+.carousel-item {
+   
+    width: 100%;
+    height: 100vh; 
+    background: url('/img/fondo.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay para oscurecer el fondo */
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Contenedor de texto */
+.carousel-item .container {
+    position: relative;
+    z-index: 2;
     text-align: center;
-    padding: 50px 20px;
-}
-/*botones*/
-.btn{
-    background-color: var(--color-primario);
     color: white;
-    padding: 10px 20px;
-    border: none;
+    max-width: 800px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 200px; 
+}
+
+
+/* Ajuste del texto */
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Párrafos */
+p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Botones */
+.hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
+    font-weight: bold;
     transition: 0.3s;
 }
-.btn a{
-    color: white;
-    text-decoration: none;
+
+.btn-primary {
+    background-color: var(--color-primario);
 }
-.btn:hover {
+
+.btn-secondary {
     background-color: var(--color-secundario);
 }
-/*trayectoria*/
-.trayectoria{
-    background-color: white;
-    padding: 50px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    max-width: 800px;
-    border-left: 5px solid var(--color-terciario);
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.8;
 }
-/*carrusel de valores*/
-.carousel-inner img{
-    height: 400px;
-    object-fit: cover;
-}
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 15px;
-    border-radius: 10px;
-}
-/*seccion *somos grinprosa**/
-.somos-ginprosa{
-    background-color: white;
-    padding: 50px 20px;
+
+/*seccion de trayectoria*/
+#trayectoria {
+    padding: 60px 0;
     text-align: center;
-}
-.somos-ginprosa .descripcion {
-    font-size: 16px;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto 30px;
+    margin-top: 100px; 
+    background: #f8f9fa; 
 }
 
-.perfil {
-    text-align: center;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
 }
 
-.perfil img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
+.section-text {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
-/* ----footer ---- */
-.footer {
-    background-color: var(--color-primario);
-    color: white;
-    padding: 40px 0;
-    font-size: 14px;
-    text-align: center;
-}
-
-.logo-footer {
-    background: #ddd;
-    padding: 20px;
-    border-radius: 5px;
+/* Botón */
+.btn-trayectoria {
     display: inline-block;
-}
-
-/* rees sociales */
-.redes-sociales a {
-    font-size: 20px;
-    margin: 0 10px;
+    background: #444;
     color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.redes-sociales a:hover {
-    color: #d1d1d1;
+.btn-trayectoria:hover {
+    background: #222;
 }
 
-/* info contacto */
-.contacto li {
-    list-style: none;
-    margin-bottom: 5px;
-    font-size: 14px;
-}
-
-.contacto i {
-    margin-right: 8px;
-    color: white;
-}
-
-/* btn del footer */
-.btn-footer {
-    display: block;
+.separador {
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: white;
-    border: 2px solid white;
-    color: var(--color-primario);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
+    height: 8px;
+    background-color: #e76f00; 
+    border: none;
+    margin-bottom: 10px;
 }
 
-.btn-footer:hover {
-    background-color: white;
-    color: var(--color-terciario);
+/* Estilo base para los círculos */
+.circle-image {
+    width: 400%; 
+    height: 250px; 
+    border-radius: 50%; 
+    border: 5px solid #E76F00; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; 
+    margin: 20px;
 }
 
-header{
-    background-color: var(--color-primario) !important;
+/* Círculo grande */
+.large-circle {
+    width: 600PX;
+    height: 600px;
 }
+
+/* Círculo pequeño */
+.small-circle {
+    width: 400px;
+    height: 400px;
+	margin-top: -100PX;
+}
+
+/* Ajuste de imágenes dentro de los círculos */
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 50%;
+}
+

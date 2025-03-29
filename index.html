@@ -2,251 +2,146 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ginprosa</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ginprosa</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 </head>
 
+</html>
+<html>
+
 <body>
-    <!--Encabezado -->
-    <header>
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo de Ginprosa">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Sobre Ginprosa</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Talento</a></li>
-                <li><a href="#">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--Seccion principal-->
-    <section>
-        <h1 class="hero">Ginprosa</h1>
-        <p>Desde el 2012 GINPROSA viene consolidándose como una empresa líder en el sector de la ingeniería de consulta
-            en el ámbito público y privado nacional, destacándose siempre por realizar las actividades de manera
-            responsable, manteniendo conductas honestas y generando excelencia en los resultados obtenidos, brindando a
-            nuestros clientes atención oportuna y de primer nivel a sus necesidades.</p>
-        <p>Nuestro equipo profesional está altamente comprometido con los resultados y sumamente calificado en diversas
-            disciplinas técnicas, lo cual, junto con las herramientas tecnológicas y metodologías innovadoras con las
-            que contamos, nos permite aportar valor a los trascendentales proyectos donde participamos, lo que repercute
-            en las regiones trazando con esto un camino de progreso, bienestar y responsabilidad social en las zonas del
-            país donde nos establecemos.</p>
-        <button class="btn"><a href="">Contáctanos</a></button>
-    </section>
-    <section class="trayectoria">
-        <h2>Nuestra Trayectoria</h2>
-        <p>La trayectoria de GINPROSA abarca importantes proyectos de infraestructura donde se realizó la Supervisión
-            Asistencia Técnica e Interventoría en los ámbitos de carreteras principales y rurales, puentes,
-            edificaciones, proyectos férreos, vías urbanas y vías para tránsito BRT además de consultorías en
-            carreteras, vías urbanas, puentes, túneles y obras geotécnicas.</p>
 
-        <button class="btn">Conoce más</button>
-    </section>
-    <section class="valores text-center">
-        <h2>Nuestros Valores</h2>
+	<!-- HEADER -->
+	<header class="header">
+		<div class="logo-container">
+			<img src="img/logo1.png" alt="Ginprosa">
+			<h1>Ginprosa SAS</h1>
+		</div>
 
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <!-- Indicadores -->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                    aria-label="Slide 5"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-                    aria-label="Slide 6"></button>
-            </div>
+		<nav class="navbar">
+			<ul>
+				<li class="active"><a href="#">Sobre Ginprosa</a></li>
+				<li><a href="#">Servicios</a></li>
+				<li><a href="#">Proyectos</a></li>
+				<li><a href="#">Clientes</a></li>
+				<li><a href="#">Talento</a></li>
+				<li><a href="#" class="btn-contactanos">Contáctanos</a></li>
+			</ul>
+		</nav>
+	</header>
 
-            <!-- Contenido del Carrusel -->
+	 <!-- CARRUSEL -->
+     <div class="bg">
+        <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <!-- Slide 1 - Integridad -->
-                <div class="carousel-item active">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/integridad.jpg" alt="Integridad">
-                        <div class="carousel-caption">
-                            <i class="fas fa-exchange-alt fa-3x"></i> <!-- Icono -->
-                            <h3>INTEGRIDAD</h3>
-                            <p>Nos guían nuestros principios dando prioridad al desarrollo de nuestra labor técnica.</p>
+                <!-- Slide 1: Sobre Ginprosa -->
+                <div class="carousel-item active" style="background-image: url('img/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>SOMOS GINPROSA</h1>
+                        <p>Desde el 2012 GINPROSA viene consolidándose como una empresa líder en el sector de la ingeniería
+                            de consulta en el ámbito público y privado nacional, destacándose siempre por realizar las
+                            actividades de manera responsable, manteniendo conductas honestas y generando excelencia en los
+                            resultados obtenidos, brindando a nuestros clientes atención oportuna y de primer nivel a sus
+                            necesidades.</p>
+                        <P>Nuestro equipo profesional está altamente comprometido con los resultados y sumamente calificado
+                            en diversas disciplinas técnicas, lo cual junto con las herramientas tecnológicas y metodologías
+                            innovadoras con las que contamos nos permiten aportar valor a los trascendentales proyectos
+                            donde participamos, lo que repercute en las regiones trazando con esto un camino de progreso,
+                            bienestar y responsabilidad social en las zonas del país donde nos establecemos.</P>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 2 - Innovación -->
-                <div class="carousel-item">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/innovacion.jpg" alt="Innovación">
-                        <div class="carousel-caption">
-                            <i class="fas fa-cogs fa-3x"></i> <!-- Icono -->
-                            <h3>INNOVACIÓN</h3>
-                            <p>Los proyectos en los que participamos cuentan con un valor agregado debido a las
-                                herramientas tecnológicas y personal calificado.</p>
+    
+                <!-- Slide 2: Misión -->
+                <div class="carousel-item" style="background-image: url('images/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>Nuestra Misión</h1>
+                        <p>Grupo Empresarial Ginprosa, es una empresa dedicada a prestar servicios de estudios y diseños,
+                            interventoría estudios y diseños, interventoría de obra, asistencia técnica, dando cumplimiento
+                            a los requisitos aplicables y garantizando la eficacia de nuestros procesos para lograr la
+                            satisfacción del cliente dentro de los parámetros establecidos de costo, tiempo y calidad.</p>
+                        <P>Buscamos contribuir con el desarrollo de la infraestructura vial del país, para lo cual cuenta,
+                            con el compromiso de sus accionistas, clientes, empleados y proveedores, ofreciendo servicios de
+                            calidad y buscando el mejoramiento continuo de la organización.
+                        </P>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slide 3 - Transparencia -->
-                <div class="carousel-item">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/transparencia.jpg" alt="Transparencia">
-                        <div class="carousel-caption">
-                            <i class="fas fa-handshake fa-3x"></i> <!-- Icono -->
-                            <h3>TRANSPARENCIA</h3>
-                            <p>Nuestros actos son coherentes con nuestros pensamientos. Tomamos decisiones serias y
-                                confiables.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4 - Imparcialidad -->
-                <div class="carousel-item">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/imparcialidad.jpg" alt="Imparcialidad">
-                        <div class="carousel-caption">
-                            <i class="fas fa-users fa-3x"></i> <!-- Icono -->
-                            <h3>IMPARCIALIDAD</h3>
-                            <p>La relación contractual con el cliente se mantiene objetiva y clara, tomando decisiones
-                                sin sesgos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 5 - Compromiso -->
-                <div class="carousel-item">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/compromiso.jpg" alt="Compromiso">
-                        <div class="carousel-caption">
-                            <i class="fas fa-chart-line fa-3x"></i> <!-- Icono -->
-                            <h3>COMPROMISO</h3>
-                            <p>Nos destacamos por nuestro gran sentido de pertenencia, generando resultados de calidad y
-                                altamente productivos.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 6 - Confianza -->
-                <div class="carousel-item">
-                    <div class="carousel-content">
-                        <img class="d-block w-100" src="img/confianza.jpg" alt="Confianza">
-                        <div class="carousel-caption">
-                            <i class="fas fa-hand-holding-heart fa-3x"></i> <!-- Icono -->
-                            <h3>CONFIANZA</h3>
-                            <p>Construimos relaciones de confianza con el cliente, atendiendo sus necesidades de manera
-                                eficiente.</p>
+    
+                <!-- Slide 3: Visión -->
+                <div class="carousel-item" style="background-image: url('images/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>Nuestra Visión</h1>
+                        <p>Mantener nuestro prestigio, generar rentabilidad, superar las exigencias de nuestros clientes,
+                            consolidar el reconocimiento, posicionamiento en la prestación de servicios de estudios y
+                            diseños, interventoría estudios y diseños, interventoría de obra, asistencia técnica en el
+                            sector público y privado ofreciendo a nuestros clientes servicios con los más altos niveles
+                            tecnológicos enmarcados en un sistema integrado de gestión, contando con personal profesional y
+                            técnico capacitado y especializado.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
                         </div>
                     </div>
                 </div>
             </div>
+    
+            <!-- Controles del carrusel -->
+            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </section>
+     </div>
+    <!-- SECCIÓN NUESTRA TRAYECTORIA -->
+	<section id="trayectoria" class="container mt-5">
+		<div class="separador"></div> 
+		
+		<div class="row align-items-center">
+			
+			<div class="col-md-6 text-center text-md-start">
+				<h2 class="section-title">Nuestra Trayectoria</h2>
+				<p class="section-text">
+					La trayectoria de GINPROSA abarca importantes proyectos de infraestructura donde se realizó la
+					Supervisión Asistencia Técnica e Interventoría en los ámbitos de carreteras principales y rurales,
+					puentes, edificaciones, proyectos férreos, vías urbanas y vías para tránsito BRT, además de
+					consultorías en carreteras, vías urbanas, puentes, túneles y obras geotécnicas.
+				</p>
+				<a href="#" class="btn-trayectoria">Conoce más</a>
+			</div>
+	
+			<!-- Imágenes circulares a la derecha -->
+			<div class="col-md-6 d-flex justify-content-center align-items-center">
+				<div class="circle-image">
+					<img src="img/Magdalena_2_-3.jpg" alt="Proyecto 1">
+				</div>
+				<div class="circle-image">
+					<img src="img/puente.png" alt="Proyecto 2">
+				</div>
+			</div>
+		</div>
+	</section>
 
-            <!-- Botones de navegación -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
-        </div>
-    </section>
-
-    <!-- Seccion somo Ginprosa -->
-    <section class="somos-ginprosa text-center">
-        <h2>Somos Ginprosa</h2>
-        <p class="descripcion">Somos un equipo comprometido con la excelencia en la interventoría de obras. Nuestro
-            equipo cuenta con profesionales altamente capacitados en el sector, asegurando la mejor calidad en cada
-            proyecto.</p>
-
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Persona 1 -->
-                <div class="col-md-4">
-                    <div class="perfil">
-                        <img src="img/persona1.jpg" alt="Persona 1">
-                        <h3>Persona1</h3>
-                        <p>Ingeniero Civil</p>
-                    </div>
-                </div>
-                <!-- Persona 2 -->
-                <div class="col-md-4">
-                    <div class="perfil">
-                        <img src="img/persona2.jpg" alt="Persona 2">
-                        <h3>Persona2</h3>
-                        <p>Arquitecto</p>
-                    </div>
-                </div>
-                <!-- Persona 3 -->
-                <div class="col-md-4">
-                    <div class="perfil">
-                        <img src="img/persona3.jpg" alt="Persona 3">
-                        <h3>Persona3</h3>
-                        <p>Coordinador de Proyectos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Pie de pagina -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo y Redes Sociales -->
-                <div class="col-md-3 text-center">
-                    <div class="logo-footer">Logo</div>
-                    <p>Síguenos en</p>
-                    <div class="redes-sociales">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-
-                <!-- Mapa -->
-                <div class="col-md-4 text-center">
-                    <div class="mapa">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509366!2d144.9537353155044!3d-37.81627974202109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce6e0!2sMelbourne%2C%20Australia!5e0!3m2!1sen!2s!4v1602743049409!5m2!1sen!2s"
-                            width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""
-                            aria-hidden="false" tabindex="0">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Información de Contacto -->
-                <div class="col-md-3">
-                    <h4>Contacto</h4>
-                    <ul class="contacto">
-                        <li><i class="fas fa-map-marker-alt"></i> Calle 123, Ciudad</li>
-                        <li><i class="fas fa-phone-alt"></i> +57 300 123 4567</li>
-                        <li><i class="fas fa-envelope"></i> contacto@ginprosa.com</li>
-                    </ul>
-                </div>
-
-                <!-- Botones Contratistas y Trabaja con Nosotros -->
-                <div class="col-md-2 text-center">
-                    <button class="btn-footer"><i class="fas fa-hard-hat"></i> Contratistas</button>
-                    <button class="btn-footer"><i class="fas fa-briefcase"></i> Trabaja con Nosotros</button>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
