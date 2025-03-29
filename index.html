@@ -1,27 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ginprosa</title>
-    <link rel="stylesheet" href="/css/styles.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ginprosa</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 </head>
+
+</html>
+<html>
+
 <body>
-    <!--Encabezado -->
-    <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <ul>
-                <li><a href="#">Sobre Ginprosa</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Clientes</a></li>
-                <li><a href="#">Talento</a></li>
-                <li><a href="#">Contáctanos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--Seccion principal-->
+
+	<!-- HEADER -->
+	<header class="header">
+		<div class="logo-container">
+			<img src="img/logo1.png" alt="Ginprosa">
+			<h1>Ginprosa SAS</h1>
+		</div>
+
+		<nav class="navbar">
+			<ul>
+				<li class="active"><a href="#">Sobre Ginprosa</a></li>
+				<li><a href="#">Servicios</a></li>
+				<li><a href="#">Proyectos</a></li>
+				<li><a href="#">Clientes</a></li>
+				<li><a href="#">Talento</a></li>
+				<li><a href="#" class="btn-contactanos">Contáctanos</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	 <!-- CARRUSEL -->
+     <div class="bg">
+        <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1: Sobre Ginprosa -->
+                <div class="carousel-item active" style="background-image: url('img/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>SOMOS GINPROSA</h1>
+                        <p>Desde el 2012 GINPROSA viene consolidándose como una empresa líder en el sector de la ingeniería
+                            de consulta en el ámbito público y privado nacional, destacándose siempre por realizar las
+                            actividades de manera responsable, manteniendo conductas honestas y generando excelencia en los
+                            resultados obtenidos, brindando a nuestros clientes atención oportuna y de primer nivel a sus
+                            necesidades.</p>
+                        <P>Nuestro equipo profesional está altamente comprometido con los resultados y sumamente calificado
+                            en diversas disciplinas técnicas, lo cual junto con las herramientas tecnológicas y metodologías
+                            innovadoras con las que contamos nos permiten aportar valor a los trascendentales proyectos
+                            donde participamos, lo que repercute en las regiones trazando con esto un camino de progreso,
+                            bienestar y responsabilidad social en las zonas del país donde nos establecemos.</P>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
     
+                <!-- Slide 2: Misión -->
+                <div class="carousel-item" style="background-image: url('images/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>Nuestra Misión</h1>
+                        <p>Grupo Empresarial Ginprosa, es una empresa dedicada a prestar servicios de estudios y diseños,
+                            interventoría estudios y diseños, interventoría de obra, asistencia técnica, dando cumplimiento
+                            a los requisitos aplicables y garantizando la eficacia de nuestros procesos para lograr la
+                            satisfacción del cliente dentro de los parámetros establecidos de costo, tiempo y calidad.</p>
+                        <P>Buscamos contribuir con el desarrollo de la infraestructura vial del país, para lo cual cuenta,
+                            con el compromiso de sus accionistas, clientes, empleados y proveedores, ofreciendo servicios de
+                            calidad y buscando el mejoramiento continuo de la organización.
+                        </P>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Slide 3: Visión -->
+                <div class="carousel-item" style="background-image: url('images/fondo1.jpeg');">
+                    <div class="overlay"></div>
+                    <div class="container text-center">
+                        <h1>Nuestra Visión</h1>
+                        <p>Mantener nuestro prestigio, generar rentabilidad, superar las exigencias de nuestros clientes,
+                            consolidar el reconocimiento, posicionamiento en la prestación de servicios de estudios y
+                            diseños, interventoría estudios y diseños, interventoría de obra, asistencia técnica en el
+                            sector público y privado ofreciendo a nuestros clientes servicios con los más altos niveles
+                            tecnológicos enmarcados en un sistema integrado de gestión, contando con personal profesional y
+                            técnico capacitado y especializado.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-primary">Contáctanos</a>
+                            <a href="#" class="btn-secondary">Conoce más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Controles del carrusel -->
+            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </section>
+     </div>
+    <!-- SECCIÓN NUESTRA TRAYECTORIA -->
+	<section id="trayectoria" class="container mt-5">
+		<div class="separador"></div> 
+		
+		<div class="row align-items-center">
+			
+			<div class="col-md-6 text-center text-md-start">
+				<h2 class="section-title">Nuestra Trayectoria</h2>
+				<p class="section-text">
+					La trayectoria de GINPROSA abarca importantes proyectos de infraestructura donde se realizó la
+					Supervisión Asistencia Técnica e Interventoría en los ámbitos de carreteras principales y rurales,
+					puentes, edificaciones, proyectos férreos, vías urbanas y vías para tránsito BRT, además de
+					consultorías en carreteras, vías urbanas, puentes, túneles y obras geotécnicas.
+				</p>
+				<a href="#" class="btn-trayectoria">Conoce más</a>
+			</div>
+	
+			<!-- Imágenes circulares a la derecha -->
+			<div class="col-md-6 d-flex justify-content-center align-items-center">
+				<div class="circle-image">
+					<img src="img/Magdalena_2_-3.jpg" alt="Proyecto 1">
+				</div>
+				<div class="circle-image">
+					<img src="img/puente.png" alt="Proyecto 2">
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
