@@ -297,3 +297,118 @@ p {
     border-radius: 50%;
 }
 
+
+
+   /* Estilos para el título de la sección */
+   .section-title {
+    display: flex; /* Usa Flexbox para alinear los elementos en línea */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: center; /* Centra el texto y las líneas horizontalmente */
+    font-size: 28px; /* Tamaño de la fuente del título */
+    font-weight: bold; /* Hace que el texto sea negrita */
+    position: relative; /* Permite posicionar los elementos ::before y ::after */
+    text-align: center; /* Asegura que el texto esté centrado */
+    color: #333; /* Color del texto */
+    margin: 30px 0; /* Espaciado superior e inferior */
+    padding: 10px 0; /* Espaciado interno arriba y abajo */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    gap: 10px; /* Espacio entre el texto y las líneas */
+}
+
+/* Estilos para las líneas a los lados del título */
+.section-title::before,
+.section-title::after {
+    content: ""; /* Agrega contenido vacío para generar las líneas */
+    flex-grow: 1; /* Hace que las líneas se expandan dentro del espacio disponible */
+    height: 3px; /* Define el grosor de las líneas */
+    background-color: #ff7337; /* Color de las líneas */
+    display: inline-block; /* Asegura que las líneas sean elementos en línea */
+    width: 50px; /* Define el ancho de las líneas */
+}
+
+
+
+/* Estilos para las imágenes del equipo*/
+
+.team-img {
+    width: 180px; /* Ancho de la imagen */
+    height: 180px; /* Altura de la imagen */
+    border-width: 2px; /* Grosor del borde */
+    border-style: solid; /* Tipo de borde (línea sólida) */
+    border-color: #ff7337; /* Color del borde */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25); /* Sombra con desplazamiento */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+}
+
+/* Espaciado general para los textos */
+.text {
+    margin: 15px !important; /* Espaciado alrededor del texto, con prioridad sobre otros estilos */
+}
+
+.text-a, .text-b {
+    color: #141414;
+    margin: 20px;
+}
+
+/* Estilos de los textos adicionales */
+.text-a, .text-b {
+    color: #141414; /* Color del texto */
+    margin: 20px; /* Espaciado alrededor */
+}
+
+/* Media Queries para Responsividad */
+
+
+/* Para Teléfonos (máximo 480px de ancho) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 20px; /* Reduce el tamaño del título */
+        gap: 10px; /* Ajusta el espacio entre elementos */
+    }
+    .section-title::before,
+    .section-title::after {
+        height: 3px; /* Mantiene el grosor de las líneas */
+    }
+    .team-img {
+        width: 120px; /* Reduce el tamaño de la imagen */
+        height: 120px;
+    }
+    .text-a, .text-b, .text {
+        font-size: 14px; /* Reduce el tamaño de la fuente */
+        margin: 10px; /* Reduce el margen */
+    }
+    .row {
+        flex-direction: column; /* Apila los elementos en una columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+}
+
+/* Ajustes adicionales para pantallas pequeñas (máximo 576px de ancho) */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 22px; /* Ajusta el tamaño del título */
+    }
+
+    .section-title::before,
+    .section-title::after {
+        width: 30px; /* Reduce el ancho de las líneas */
+    }
+}
+
+
+/* Para Tablets (máximo 768px de ancho) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 24px; /* Reduce el tamaño del título */
+    }
+    .team-img {
+        width: 150px; /* Reduce el tamaño de la imagen */
+        height: 150px;
+    }
+    .text-a, .text-b, .text {
+        margin: 15px; /* Reduce el espaciado del texto */
+        font-size: 16px; /* Reduce el tamaño de la fuente */
+    }
+}   
