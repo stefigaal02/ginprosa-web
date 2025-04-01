@@ -412,3 +412,54 @@ p {
         font-size: 16px; /* Reduce el tamaño de la fuente */
     }
 }   
+
+/* -------------------------------------------------*/
+/*     Estilos para la Sección "Nuestro-Valores"    */
+/* -------------------------------------------------*/
+
+#card-ajustes {
+    border: 2px solid #ffc89a; /* Borde de la tarjeta */
+    border-radius: 50px; /* Bordes redondeados */
+    padding: 40px; /* Espaciado interno */
+    text-align: center; /* Centra el contenido */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: white; /* Fondo blanco */
+    height: 100%; /* Altura completa para alineación uniforme */
+}
+
+#card-ajustes img {
+    width: 150px; /* Tamaño fijo de la imagen */
+    height: 150px; /* Tamaño fijo de la imagen */
+    margin: 10px auto; /* Centrar horizontalmente */
+    display: block; /* Evita espacios adicionales */
+    border: 2px solid #f5821f; /* Borde anaranjado */
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Estilos para los botones de navegación del carrusel */
+#control-next, #control-prev{
+    width: 50px; /* Tamaño de los botones */
+    height: 50px; /* Tamaño de los botones */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    border-radius: 50%; /* Forma circular */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste fino del centrado */
+    opacity: 1; /* Visibilidad completa */
+}
+
+/* Cambio de color al pasar el cursor sobre los botones */
+
+#control-prev:hover, #control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+}
+
+/* Posicionamiento del botón izquierdo */
+#control-prev {
+    left: -70px; /* Separación del borde del carrusel */
+}
+
+/* Posicionamiento del botón derecho */
+#control-next {
+    right: -70px; /* Separación del borde del carrusel */
+}
