@@ -663,6 +663,13 @@ border-radius: 0px; /* Evita que las esquinas del mapa sean redondeadas. */
 margin-bottom: 5px; /* Agrega 5px de espacio debajo de cada párrafo dentro de #detalles-contacto */
 }
 
+/* Agregué li para modificar su punto */
+li {
+    list-style-position: outside; /* Mantiene el diseño original */
+    text-indent: -0.2em; /* Ajusta el texto para acercarlo al marcador */
+}
+
+
 /* Botones */
 
 #button-contratistas,
@@ -695,3 +702,115 @@ color: rgb(0, 0, 0); /* El texto del botón será de color blanco */
 #button-trabaja:hover{
     background: #F4A442;
 }
+
+
+/* Responsive */
+
+/* Para celulares (hasta 768px) */
+@media (max-width: 768px) {
+    #items {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #items > div {
+        width: 100%;
+    }
+
+    #items > .col-md-3:not(:last-child) {
+        border-bottom: 1px solid #c04444;
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+    }
+
+    #contenedor-logo-redes img {
+        max-width: 150px;
+    }
+
+    #botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%; /* Para que no se desborde */
+    }
+
+    #botones button {
+        width: 80%;
+        max-width: 250px; /* Evita que los botones sean demasiado anchos */
+    }
+
+    li {
+        list-style-position: inside; 
+        text-indent: -0.2em; /* Ajusta el texto para acercarlo al marcador */
+    }
+}
+
+/* Para tabletas y pantallas medianas (entre 769px y 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+#mi-footer .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#botones {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para evitar que empujen hacia los lados */
+    align-items: flex-start; /* Asegura que queden alineados arriba */
+    justify-content: flex-start;
+    gap: 10px; /* Espacio entre botones */
+}
+
+#botones button {
+    width: 100%; /* Ajusta el ancho para evitar espacios adicionales */
+    max-width: 200px; /* Controla el tamaño máximo */
+    padding: 10px 20px;
+}
+}
+
+/* Para pantallas grandes (1200px en adelante) */
+@media (min-width: 1200px) {
+#mi-footer {
+    padding-bottom: 80px;
+}
+
+#url-mapa {
+    height: 200px;
+}
+
+#mi-footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#items {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribuye el espacio sin empujar */
+    gap: 15px;
+}
+
+#botones button {
+    width: auto;
+    padding: 10px 20px;
+}
+}
+
+
+
