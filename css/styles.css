@@ -649,7 +649,7 @@ width: 90%;  /* El mapa ocupará el 90% del ancho de su contenedor. */
 height: 160px; /* La altura del mapa se establece a 160px. */
 border: none; /* Elimina el borde del iframe para que no haya una línea alrededor del mapa. */
 border-radius: 0px; /* Evita que las esquinas del mapa sean redondeadas. */
-};
+}
 
 
 
