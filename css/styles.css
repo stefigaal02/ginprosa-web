@@ -66,18 +66,44 @@
     margin: 0;
 }
 
+@media (max-width: 1200px){
+    .header{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-self: center;
+        position: relative;
+    }
+    .logo-container{
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    .navbar {
+        width: 100%;
+    }
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 /* menu de navegacion */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar ul {
-	list-style: none;
-    margin-left: auto; 
-    display: flex; 
+    list-style: none;
+    margin-left: auto;
+    display: flex;
     gap: 20px;
+    padding-left: 0;
 }
 
 
@@ -89,9 +115,15 @@
     color: black;
     text-decoration: none;
     font-weight: bold;
-    padding: 8px 0;
+    padding: 8px 12px;
     transition: color 0.3s ease;
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar ul li a i {
+    font-size: 16px;
 }
 
 .navbar ul li a:hover {
@@ -115,13 +147,16 @@
 }
 
 .btn-contactanos {
-    background-color: #d46a1b; 
-    color: white; 
-    padding: 12px 19px; 
-    border-radius: 5px; 
-    text-decoration: none; 
+    background-color: #d46a1b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
     transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .btn-contactanos:hover {
@@ -219,7 +254,7 @@ p {
 
 /*seccion de trayectoria*/
 #trayectoria {
-    padding: 60px 0;
+    padding: 0 0;
     text-align: center;
     margin-top: 100px; 
     background: #f8f9fa; 
@@ -241,34 +276,36 @@ p {
 
 /* Botón */
 .btn-trayectoria {
-    display: inline-block;
-    background: #444;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    background: #E76F00;
     color: white;
     padding: 12px 24px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-}
+}  
 
 .btn-trayectoria:hover {
     background: #222;
 }
 
-.separador {
-    width: 100%;
-    height: 8px;
-    background-color: #e76f00; 
-    border: none;
-    margin-bottom: 10px;
-}
 
 /* Estilo base para los círculos */
+.cont-circle{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
 .circle-image {
-    width: 400%; 
-    height: 250px; 
+    width: 150px; 
+    height: 150px; 
     border-radius: 50%; 
-    border: 5px solid #E76F00; 
+    border: 1px solid #E76F00; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -276,17 +313,26 @@ p {
     margin: 20px;
 }
 
+.circle-image:first-child{
+    margin-top: 100px;
+}
+
+.circle-image:last-child{
+    margin-top: 0px;
+}
+
 /* Círculo grande */
 .large-circle {
-    width: 600PX;
+    width: 600px;
     height: 600px;
+   
 }
 
 /* Círculo pequeño */
 .small-circle {
     width: 400px;
     height: 400px;
-	margin-top: -100PX;
+	
 }
 
 /* Ajuste de imágenes dentro de los círculos */
@@ -329,89 +375,164 @@ p {
 
 
 /* Estilos para las imágenes del equipo*/
-
-.team-img {
-    width: 180px; /* Ancho de la imagen */
-    height: 180px; /* Altura de la imagen */
-    border-width: 2px; /* Grosor del borde */
-    border-style: solid; /* Tipo de borde (línea sólida) */
-    border-color: #ff7337; /* Color del borde */
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25); /* Sombra con desplazamiento */
-    border-radius: 50%; /* Hace que la imagen sea redonda */
-    margin-bottom: 10px; /* Espacio debajo de la imagen */
-    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+/* Título de la sección */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    color: #333;
+    margin: 30px 0;
+    padding: 10px 0;
+    width: 100%;
+    gap: 10px;
 }
 
-/* Espaciado general para los textos */
-.text {
-    margin: 15px !important; /* Espaciado alrededor del texto, con prioridad sobre otros estilos */
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex-grow: 1;
+    height: 3px;
+    background-color: #ff7337;
+    display: inline-block;
+    width: 50px;
 }
 
-.text-a, .text-b {
+/* Textos principales */
+.text-a,
+.text-b {
     color: #141414;
-    margin: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-/* Estilos de los textos adicionales */
-.text-a, .text-b {
-    color: #141414; /* Color del texto */
-    margin: 20px; /* Espaciado alrededor */
+/* Estilo general de los textos */
+.text {
+    margin: 15px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
 }
 
-/* Media Queries para Responsividad */
+/* Contenedor del equipo */
+.team-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Tarjetas individuales */
+.team-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de perfil */
+.team-img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 2px #ec731e;
+    margin-bottom: 15px;
+    overflow:hidden;
+}
+
+.team-img:hover {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+}
 
 
-/* Para Teléfonos (máximo 480px de ancho) */
+
+/* Nombre y cargo */
+.team-name {
+    margin: 10px 0 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+}
+
+.team-role {
+    font-size: 14px;
+    color: #ff7337;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+/* Teléfonos */
 @media (max-width: 480px) {
     .section-title {
-        font-size: 20px; /* Reduce el tamaño del título */
-        gap: 10px; /* Ajusta el espacio entre elementos */
+        font-size: 20px;
+        gap: 10px;
     }
+
     .section-title::before,
     .section-title::after {
-        height: 3px; /* Mantiene el grosor de las líneas */
+        width: 30px;
     }
+
     .team-img {
-        width: 120px; /* Reduce el tamaño de la imagen */
+        width: 120px;
         height: 120px;
     }
-    .text-a, .text-b, .text {
-        font-size: 14px; /* Reduce el tamaño de la fuente */
-        margin: 10px; /* Reduce el margen */
-    }
-    .row {
-        flex-direction: column; /* Apila los elementos en una columna */
-        align-items: center; /* Centra los elementos horizontalmente */
-    }
-}
 
-/* Ajustes adicionales para pantallas pequeñas (máximo 576px de ancho) */
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 22px; /* Ajusta el tamaño del título */
+    .team-card {
+        max-width: 90%;
     }
 
-    .section-title::before,
-    .section-title::after {
-        width: 30px; /* Reduce el ancho de las líneas */
+    .text-a,
+    .text-b,
+    .text {
+        font-size: 14px;
+        margin: 10px;
     }
 }
 
-
-/* Para Tablets (máximo 768px de ancho) */
+/* Tablets */
 @media (max-width: 768px) {
     .section-title {
-        font-size: 24px; /* Reduce el tamaño del título */
+        font-size: 24px;
     }
+
     .team-img {
-        width: 150px; /* Reduce el tamaño de la imagen */
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
-    .text-a, .text-b, .text {
-        margin: 15px; /* Reduce el espaciado del texto */
-        font-size: 16px; /* Reduce el tamaño de la fuente */
+
+    .text-a,
+    .text-b,
+    .text {
+        font-size: 15px;
+        margin: 15px;
     }
-}   
+
+    .team-card {
+        max-width: 80%;
+    }
+
+    .team-wrapper {
+        gap: 30px;
+    }
+}
+
 
 /* -------------------------------------------------*/
 /*     Estilos para la Sección "Nuestro-Valores"    */
@@ -462,6 +583,14 @@ p {
 /* Posicionamiento del botón derecho */
 #control-next {
     right: -70px; /* Separación del borde del carrusel */
+}
+
+#valoresCarousel .carousel-item {
+    height: auto; /* ← ESTA ES LA LÍNEA CLAVE */
+}
+
+#valoresCarousel .carousel-item {
+    height: auto; /* ← ESTA ES LA LÍNEA CLAVE */
 }
 
 
