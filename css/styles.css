@@ -325,7 +325,11 @@ p {
 .large-circle {
     width: 600px;
     height: 600px;
-   
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 2px #ec731e;
+    margin-bottom: 15px;
+    overflow: hidden;
 }
 
 /* Círculo pequeño */
@@ -605,7 +609,7 @@ p {
 
 /* Logo */
 #mi-footer img {
-max-width: 130px;
+max-width: 100px;
 }
 
 
@@ -621,7 +625,7 @@ font-size: 14px; /* Tamaño de fuente de 14px para los textos en el footer relac
 
 }
 #footer-logo{
-max-width: 110px; /* Establece un tamaño máximo de 110px de ancho para el logo. */
+max-width: 100px; /* Establece un tamaño máximo de 110px de ancho para el logo. */
 
 }
 
@@ -666,7 +670,15 @@ background-color: #f58217; /* Establece un fondo verde brillante para el botón 
 color: black; /* El texto del botón será de color negro */
 }
 
+#button-contratistas:hover{
+    background: #F4A442;
+}
+
 #button-trabaja {
 background-color: #f58217; /* Establece un fondo negro para el botón */
 color: rgb(0, 0, 0); /* El texto del botón será de color blanco */
+}
+
+#button-trabaja:hover{
+    background: #F4A442;
 }
