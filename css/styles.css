@@ -717,114 +717,47 @@ transition: box-shadow 0.3s ease;
     box-shadow: 0 0 12px rgba(255, 255, 255, 1);
 }
 
+/* ------------------- */
+/*     Responsive      */
+/* ------------------- */
 
-/* Responsive */
 
-/* Para celulares (hasta 768px) */
-@media (max-width: 768px) {
-    #items {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #items > div {
-        width: 100%;
-    }
-
-    #items > .col-md-3:not(:last-child) {
-        border-bottom: 1px solid #c04444;
-        margin-bottom: 30px;
-        padding-bottom: 25px;
-    }
-
-    #contenedor-logo-redes img {
-        max-width: 150px;
-    }
-
-    #botones {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 100%; /* Para que no se desborde */
-    }
-
-    #botones button {
-        width: 80%;
-        max-width: 250px; /* Evita que los botones sean demasiado anchos */
-    }
-
-    li {
-        list-style-position: inside; 
-        text-indent: -0.2em; /* Ajusta el texto para acercarlo al marcador */
-    }
-}
-
-/* Para tabletas y pantallas medianas (entre 769px y 1199px) */
-@media (min-width: 769px) and (max-width: 1199px) {
-#mi-footer .row {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-#items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#botones {
-    display: flex;
-    flex-direction: column; /* Cambia a columna para evitar que empujen hacia los lados */
-    align-items: flex-start; /* Asegura que queden alineados arriba */
-    justify-content: flex-start;
-    gap: 10px; /* Espacio entre botones */
-}
-
-#botones button {
-    width: 100%; /* Ajusta el ancho para evitar espacios adicionales */
-    max-width: 200px; /* Controla el tamaño máximo */
-    padding: 10px 20px;
-}
-}
-
-/* Para pantallas grandes (1200px en adelante) */
-@media (min-width: 1200px) {
-#mi-footer {
-    padding-bottom: 80px;
-}
-
-#url-mapa {
-    height: 200px;
-}
-
-#mi-footer .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#items {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#botones {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; /* Distribuye el espacio sin empujar */
-    gap: 15px;
-}
-
-#botones button {
-    width: auto;
-    padding: 10px 20px;
-}
-}
+@media (max-width: 760px) { 
+    /* Aplica los estilos solo si el ancho de pantalla es de 768px o menor (modo responsive para móviles) */
+   
+       #items {
+           display: flex; /* Activa el modelo de caja flexible para organizar los elementos internos */
+           justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+           align-items: flex-start; /* Alinea los elementos al inicio (arriba) del contenedor */
+           text-align: center; 
+       }
+   
+       li {
+           list-style-position: inside; 
+           text-indent: -0.2em; /* Ajusta el texto para acercarlo al marcador */
+       }
+   
+       /* Agrega un margen inferior de 20px a estos elementos para separarlos */
+       #contenedor-logo-redes,
+       #url-mapa,
+       #detalles-contacto,
+       #botones {
+           margin-bottom: 20px;
+       }
+   
+       /* Agrega líneas decorativas antes o después de ciertos elementos */
+       #contenedor-logo-redes::after,  /* Línea después del contenedor de logo y redes */
+       #url-mapa::after,              /* Línea después de la URL del mapa */
+       #detalles-contacto::before,    /* Línea antes de los detalles de contacto */
+       #detalles-contacto::after {    /* Línea después de los detalles de contacto */
+           content: "";               /* Necesario para que los pseudo-elementos aparezcan */
+           display: block;            /* Convierte el pseudo-elemento en un bloque visible */
+           width: 80%;                /* La línea ocupa el 80% del ancho del contenedor */
+           height: 2px;               /* Grosor de la línea */
+           background-color: #ff5100; /* Color naranja */
+           margin: 20px auto;         /* Espaciado arriba y abajo de 20px, centrado horizontalmente */
+       }
+   }
 
 
 
