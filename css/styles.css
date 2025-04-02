@@ -588,3 +588,85 @@ p {
 #valoresCarousel .carousel-item {
     height: auto; /* ← ESTA ES LA LÍNEA CLAVE */
 }
+
+#valoresCarousel .carousel-item {
+    height: auto; /* ← ESTA ES LA LÍNEA CLAVE */
+}
+
+
+/* -------------------------------- */
+/*               Footer             */
+/* -------------------------------- */
+#mi-footer {
+    background-color: #ffc89a; /* Asegura que se aplique el fondo */
+    color: #333 ; /* Asegura que el color de texto se aplique */
+    padding-bottom: 80px; /* Agrega 80px de espacio en la parte inferior del footer para que no quede pegado al borde. */
+}
+
+/* Logo */
+#mi-footer img {
+max-width: 130px;
+}
+
+
+footer p {
+margin: 0; /* Elimina el margen por defecto de los párrafos dentro del footer, asegurando que el texto esté alineado sin espacio extra alrededor. */
+font-size: 14px; /* Establece el tamaño de fuente del texto a 14px para que el texto no sea ni muy grande ni pequeño. */
+
+}
+
+#p-footer{
+margin-bottom: 10px; /* Añade 10px de espacio debajo de los párrafos dentro de la sección de contacto. */
+font-size: 14px; /* Tamaño de fuente de 14px para los textos en el footer relacionados con el contacto. */
+
+}
+#footer-logo{
+max-width: 110px; /* Establece un tamaño máximo de 110px de ancho para el logo. */
+
+}
+
+
+/* Mapa */
+#url-mapa { 
+width: 90%;  /* El mapa ocupará el 90% del ancho de su contenedor. */
+height: 160px; /* La altura del mapa se establece a 160px. */
+border: none; /* Elimina el borde del iframe para que no haya una línea alrededor del mapa. */
+border-radius: 0px; /* Evita que las esquinas del mapa sean redondeadas. */
+};
+
+
+
+/* Contacto */
+#detalles-contacto{
+    margin-top: 20px; /* Ajusta el valor según lo que necesites */
+
+}
+
+#detalles-contacto p {
+margin-bottom: 5px; /* Agrega 5px de espacio debajo de cada párrafo dentro de #detalles-contacto */
+}
+
+/* Botones */
+
+#button-contratistas,
+#button-trabaja {
+border: none; /* Elimina el borde alrededor de los botones */
+padding: 10px; /* Agrega 10px de espacio interno dentro del botón */
+margin-right: 5px; /* Agrega un margen de 5px en el lado derecho del botón */
+cursor: pointer; /* Cambia el cursor a una mano (puntero) cuando se pasa sobre el botón */
+font-size: 14px; /* Establece el tamaño de la fuente a 14px */
+border-radius: 5px; /* Redondea las esquinas del botón con un radio de 5px */
+margin-top: 11px; /* Agrega un margen superior de 25px a los botones */
+width: 100%; /* Ambos botones ocuparán todo el ancho disponible */
+}
+
+
+#button-contratistas {
+background-color: #f58217; /* Establece un fondo verde brillante para el botón */
+color: black; /* El texto del botón será de color negro */
+}
+
+#button-trabaja {
+background-color: #f58217; /* Establece un fondo negro para el botón */
+color: rgb(0, 0, 0); /* El texto del botón será de color blanco */
+}
